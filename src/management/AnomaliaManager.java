@@ -42,10 +42,12 @@ public class AnomaliaManager {
     public void mostrarMenu() {
         boolean continuar = true;
         while (continuar) {
+            Menu menu = new Menu();
             System.out.println("\n=== Menú Anomalías ===");
             System.out.println("1. Registrar Anomalía");
             System.out.println("2. Mostrar Anomalías");
             System.out.println("3. Salir");
+            System.out.println("4. volver a escoger el bando");
             int opcion = ConsoleUtils.leerEntero("Seleccione una opción: ");
             ConsoleUtils.limpiarBuffer();
 
@@ -53,6 +55,7 @@ public class AnomaliaManager {
                 case 1 -> registrarAnomalia();
                 case 2 -> mostrarAnomalias();
                 case 3 -> continuar = false;
+                case 4 -> menu.seleccionarMenu();
                 default -> System.out.println("Opción no válida.");
             }
         }
