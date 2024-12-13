@@ -30,9 +30,12 @@ public class AgenteManager {
             return;
         }
         System.out.println("=== Lista de Agentes ===");
+        int contador = 0;
         for (Agente agente : agentes) {
             System.out.println(agente);
+            contador++;
         }
+        System.out.println("la cantidad de agentes registrados son " + contador);
     }
 
     public void mostrarMenu() {
